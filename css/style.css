@@ -127,8 +127,11 @@ ul {
 .settinges-box .content {
   padding: 10px;
 }
-.settinges-box .content .opt-box .colors-list {
-  padding-left: 40px;
+.settinges-box .opt-box {
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+  margin: 10px 0;
 }
 .settinges-box .content .opt-box .colors-list li {
   width: 30px;
@@ -157,7 +160,24 @@ ul {
 .settinges-box .content .opt-box .colors-list li:last-child {
   background-color: #ff9800;
 }
-
+.settinges-box .random-bg button {
+  color: white;
+  width: 50px;
+  background-color: #009688;
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--main-transition);
+  opacity: 0.5;
+}
+.settinges-box .random-bg button.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.settinges-box .random-bg button:hover {
+  opacity: 1;
+}
 /* End Settinges Box  */
 
 /* Start Landing Page  */
