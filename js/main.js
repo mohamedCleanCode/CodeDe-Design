@@ -87,3 +87,15 @@ function randomImages() {
   }
 }
 randomImages();
+
+// [3] --> Logic Of Full Skills Width
+
+let sctionSkills = document.querySelector(".skills");
+let allSkills = document.querySelectorAll(".skills span");
+window.onscroll = function () {
+  if (window.scrollY <= sctionSkills.offsetTop + 200) {
+    allSkills.forEach((span) => {
+      span.style.width = span.dataset.progress;
+    });
+  }
+};
