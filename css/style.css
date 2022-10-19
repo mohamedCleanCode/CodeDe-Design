@@ -261,6 +261,80 @@ ul {
 }
 /* End Landing Page  */
 
+/* Start about  */
+.about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.about .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about .info {
+  flex: 1;
+}
+.about .info h2 {
+  color: var(--main-color);
+  font-size: 30px;
+}
+.about .info p {
+  color: rgb(114, 104, 104);
+  font-weight: bold;
+  line-height: 1.6;
+}
+.about .image {
+  flex: 1;
+  text-align: center;
+}
+.about .image img {
+  width: 300px;
+}
+/* End about  */
+
+/* Start Skills  */
+.skills {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eee;
+}
+.skills h2 {
+  color: var(--main-color);
+  font-size: 30px;
+}
+.skills .box {
+  padding: 30px 0;
+}
+.skills .box .skill {
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.skills .box .skill .skill-name {
+  width: 130px;
+  font-weight: bold;
+  text-align: center;
+}
+.skills .box .skill .skill-progress {
+  background-color: #eeeeee6b;
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.skills .box .skill .skill-progress span {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: width 2s linear;
+}
+/* End Skills  */
+
 /* Start Animeation */
 @keyframes left-move {
   50% {
