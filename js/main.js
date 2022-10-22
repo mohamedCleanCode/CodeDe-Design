@@ -88,7 +88,19 @@ function randomImages() {
 }
 randomImages();
 
-// [3] --> Logic Of Full Skills Width
+// [3] Logic Of Navbar Active
+
+let links = document.querySelectorAll(".links li a");
+links.forEach((a) => {
+  a.addEventListener("click", (e) => {
+    links.forEach((a) => {
+      a.classList.remove("active");
+      e.target.classList.add("active");
+    });
+  });
+});
+
+// [4] --> Logic Of Full Skills Width
 
 let sctionSkills = document.querySelector(".skills");
 let allSkills = document.querySelectorAll(".skills span");
@@ -99,3 +111,39 @@ window.onscroll = function () {
     });
   }
 };
+
+// [5] Logic Of Gallery
+
+let imgages = document.querySelectorAll(".gallery img");
+imgages.forEach((img) => {
+  img.addEventListener("click", (e) => {
+    let overLay = document.createElement("div");
+    overLay.className = "over-layy";
+    document.body.appendChild(overLay);
+    let popupBox = document.createElement("div");
+    popupBox.className = "popup-box";
+    let popupImage = document.createElement("img");
+    popupImage.src = e.target.src;
+    popupBox.appendChild(popupImage);
+    document.body.appendChild(popupBox);
+    let popupHeadding = document.createElement("h4");
+    let p = document.createElement("p");
+    let textHeadding = document.createTextNode(e.target.alt);
+    let textP = document.createTextNode("Some Thing About Image");
+    popupHeadding.appendChild(textHeadding);
+    popupBox.appendChild(popupHeadding);
+    p.appendChild(textP);
+    popupBox.appendChild(p);
+    let closeButton = document.createElement("span");
+    closeButton.className = "close-button";
+    closeButton.innerHTML = "X";
+    popupBox.appendChild(closeButton);
+  });
+});
+addEventListener("click", (e) => {
+  if (e.target.className === "close-button") {
+    e.target.parentNode.remove();
+    document.querySelector(".over-layy").remove();
+  }
+});
+
