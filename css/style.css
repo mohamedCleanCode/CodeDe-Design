@@ -335,6 +335,226 @@ ul {
 }
 /* End Skills  */
 
+/* Start Gallery  */
+.gallery {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.gallery h2 {
+  color: var(--main-color);
+  font-size: 30px;
+}
+.gallery .box {
+  text-align: center;
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+.gallery .box img {
+  width: 220px;
+  height: 220px;
+  padding: 5px;
+  margin: 5px 0;
+  background-color: #f6f6f6;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.over-layy {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+.popup-box {
+  position: fixed;
+  z-index: 1001;
+  left: 50%;
+  top: 50%;
+  width: 450px;
+  height: 450px;
+  background-color: #eee;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+.popup-box img {
+  max-width: 100%;
+}
+.popup-box .close-button {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  color: white;
+  font-weight: bold;
+  background-color: var(--main-color);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+/* End Gallery  */
+
+/* Start Timeline */
+.timeline {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eee;
+}
+.timeline .timeline-content {
+  position: relative;
+  overflow: hidden;
+}
+.timeline .timeline-content:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 50%;
+  margin-left: -1px;
+  top: 0;
+}
+.timeline .timeline-content .year {
+  margin: 20px auto;
+  width: 50px;
+  background-color: var(--main-color);
+  position: relative;
+  z-index: 2;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  padding: 2px 5px;
+  font-weight: bold;
+}
+.timeline .timeline-content .left,
+.timeline .timeline-content .right {
+  width: calc(50% - 25px);
+  margin-bottom: 40px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .timeline .timeline-content .left,
+  .timeline .timeline-content .right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .timeline .timeline-content .left:before,
+  .timeline .timeline-content .right:before {
+    display: none;
+  }
+  .timeline .timeline-content .left .content:before,
+  .timeline .timeline-content .right .content:before {
+    display: none;
+  }
+}
+.timeline .timeline-content .left {
+  float: left;
+}
+.timeline .timeline-content .left:before {
+  right: -35px;
+}
+.timeline .timeline-content .right {
+  float: right;
+}
+.timeline .timeline-content .right:before {
+  left: -35px;
+}
+.timeline .timeline-content .left:before,
+.timeline .timeline-content .right:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border: 3px solid var(--main-color);
+  position: absolute;
+  border-radius: 50%;
+  top: 20px;
+}
+.timeline .timeline-content .content {
+  padding: 20px;
+  background-color: #fff;
+}
+.timeline .timeline-content .content h3 {
+  font-weight: bold;
+  color: var(--main-color);
+  margin: 0 0 10px;
+}
+.timeline .timeline-content .content p {
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
+.clearfix {
+  clear: both;
+}
+.timeline .timeline-content .left .content:before {
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent #fff;
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: -20px;
+  top: 20px;
+}
+.timeline .timeline-content .right .content:before {
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent #fff transparent transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: -20px;
+  top: 20px;
+}
+/* End Timeline */
+
+/* Start Features  */
+.features {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.features .container > h2 {
+  color: var(--main-color);
+  font-size: 30px;
+}
+.features .main-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  text-align: center;
+}
+.features .box h2 {
+  margin: 10px 0;
+  position: relative;
+}
+.features .box h2::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  left: 50%;
+  bottom: 0;
+  background-color: var(--main-color);
+  transform: translateX(-50%);
+  top: 40px;
+}
+.features .box p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-top: 30px;
+}
+.features .box img {
+  width: 100px;
+}
+/* End Features  */
+
 /* Start Animeation */
 @keyframes left-move {
   50% {
