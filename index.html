@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeDev Design</title>
+    <title>CodeDev</title>
     <!-- Render Elements -->
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Font Awesome -->
@@ -46,9 +46,12 @@
             <div class="opt-box">
                 <h2>Bullets</h2>
                 <div class="bullets-opt">
-                    <button class="yes active" data-choice="yes">Yes</button>
-                    <button class="no" data-choice="no">No</button>
+                    <button class="yes active" data-display="yes">Yes</button>
+                    <button class="no" data-display="no">No</button>
                 </div>
+            </div>
+            <div class="opt-box">
+                <button class="reset-box">Reset Options</button>
             </div>
         </div>
     </div>
@@ -75,15 +78,29 @@
                     <a href="#home">CodeDe<span>Design</span></a>
                 </div>
             </div>
-            <ul class="links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#timeline">TimeLine</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-            </ul>
+            <div class="links-container">
+                <ul class="links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#timeline">TimeLine</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-bars toggle"></i>
+                <ul class="">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#timeline">TimeLine</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
         </div>
         <div class="info">
             <h1>We are <span>creative</span> agency.</h1>
@@ -253,6 +270,63 @@
     </div>
     <!-- End Features  -->
 
+    <!-- Start Testimonials -->
+    <div class="testimonials" id="testimonials">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="content">
+                <div class="box">
+                    <p>Iam very happy with the product its amazing and i recieve it very fast and the price was amazing
+                    </p>
+                    <h3>Ahmed Mosaad</h3>
+                    <p>CEO At Company</p>
+                </div>
+                <div class="box">
+                    <p>Iam very happy with the product its amazing and i recieve it very fast and the price was amazing
+                    </p>
+                    <h3>Ahmed Mosaad</h3>
+                    <p>CEO At Company</p>
+                </div>
+                <div class="box">
+                    <p>Iam very happy with the product its amazing and i recieve it very fast and the price was amazing
+                    </p>
+                    <h3>Ahmed Mosaad</h3>
+                    <p>CEO At Company</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonials -->
+
+    <!-- Start Contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="">
+                <div class="left">
+                    <input type="text" placeholder="Your Name" name="name">
+                    <input type="text" placeholder="Your Phone" name="phone">
+                    <input type="email" placeholder="Your Email" name="email">
+                    <input type="text" placeholder="Your Subject" name="subject">
+                </div>
+                <div class="right">
+                    <textarea placeholder="Your Message" name="message"></textarea>
+                    <input type="submit" value="Contact Us">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Contact -->
+
+    <!-- Start Footer  -->
+    <div class="footer">
+        <div class="container">
+            <p>created with by <i class="fa fa-heart pulse"></i> <span>Mohamed</span></p>
+        </div>
+    </div>
+    <!-- End Footer  -->
 
     <!-- Main JS File  -->
     <script src="js/main.js"></script>
